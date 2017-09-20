@@ -1,0 +1,298 @@
+﻿<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Talento detalhe</h1>
+        <p class="lead">Easy Communication & Technology (Developers/Desenvolvedores)</p>
+    </div>
+</div>
+
+<button (click)="goBack()" type="button" class="btn btn-default">
+    <i class="material-icons">keyboard_return</i>
+</button>
+
+<br />
+
+<div class="list-group" *ngIf="talents">
+
+
+    <table class="table">
+       
+        <tbody>
+            <tr>
+                <th scope="row">ID:</th>
+                <td>{{talents.talentID}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Data do cadastro:</th>
+                <td>{{talents.dataCadastro | date: 'dd/MM/yyyy'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Nome:</th>
+                <td>{{talents.nome}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Email:</th>
+                <td>{{talents.email}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Skype:</th>
+                <td>{{talents.skype}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Telefone:</th>
+                <td>{{talents.telefone}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Linkedin:</th>
+                <td>{{talents.linkedin}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Cidade:</th>
+                <td>{{talents.cidade}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Estado:</th>
+                <td>{{talents.estado}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Portfolio:</th>
+                <td>{{talents.portfolio}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Up to 4 hours per day / Até 4 horas por dia:</th>
+                <td>{{talents.disponibilidadeQuatroHorasDia}}</td>
+            </tr>
+
+             <tr>
+                <th scope="row"> 4 to 6 hours per day / De 4 á 6 horas por dia:</th>
+                <td>{{talents.disponibilidadeQuatroSeisHorasDia}}</td>
+            </tr>
+
+             <tr>  
+                <th scope="row"> 6 to 8 hours per day /De 6 á 8 horas por dia:</th>
+                <td>{{talents.disponibilidadeSeisOitoHorasDia}}</td>
+            </tr>
+
+             <tr>
+                <th scope="row">Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia:</th>
+                <td>{{talents.disponibilidadeAcimaOitoHorasDia}}</td>
+            </tr>
+
+             <tr>
+                <th scope="row">Only weekends / Apenas finais de semana:</th>
+                <td>{{talents.disponibilidadeApenasFinaisSemana}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00):</th>
+                <td>{{talents.horasDisponiveisManha}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00):</th>
+                <td>{{talents.horasDisponiveisTarde}}</td>
+            </tr>
+           
+
+            <tr>
+                <th scope="row">Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00):</th>
+                <td>{{talents.horasDisponiveisNoite}}</td>
+            </tr>
+            
+
+            <tr>
+                <th scope="row">Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante):</th>
+                <td>{{talents.horasDisponiveisMadrugada}}</td>
+            </tr>
+           
+
+            <tr>
+                <th scope="row">Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00):</th>
+                <td>{{talents.horasDisponiveisComercial}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Pretensão Salarial Hora:</th>
+                <td>{{talents.pretensaoSalarialHora}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Banco Informacao:</th>
+                <td>{{talents.bancoInformacao}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Informacão Bancaria Nome:</th>
+                <td>{{talents.informacaoBancariaNome}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Informacão Bancaria Cpf:</th>
+                <td>{{talents.informacaoBancariaCpf}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Informacão Bancaria Banco:</th>
+                <td>{{talents.informacaoBancariaBanco}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Informacão Bancaria Agencia:</th>
+                <td>{{talents.informacaoBancariaAgencia}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Informacão Bancaria Tipo:</th>
+                <td>{{talents.informacaoBancariaTipo}}</td>
+            </tr>
+           
+            <tr>
+                <th scope="row">Informacão Bancaria Numero Conta:</th>
+                <td>{{talents.informacaoBancariaNumeroConta}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Conhecimento Ionic:</th>
+                <td>Nível:{{talents.conhecimentoIonic}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Android:</th>
+                <td>Nível:{{talents.conhecimentoAndroid}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Ios:</th>
+                <td>Nível:{{talents.conhecimentoIos}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Html:</th>
+                <td>Nível:{{talents.conhecimentoHtml}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Css:</th>
+                <td>Nível:{{talents.conhecimentoCss}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Bootstrap:</th>
+                <td>Nível:{{talents.conhecimentoBootstrap}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Jquery:</th>
+                <td>Nível:{{talents.conhecimentoJquery}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento AngularJs:</th>
+                <td>Nível:{{talents.conhecimentoAngularJs}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Java:</th>
+                <td>Nível:{{talents.conhecimentoJava}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Asp.Net Mvc:</th>
+                <td>Nível:{{talents.conhecimentoAspNetMvc}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento C:</th>
+                <td>Nível:{{talents.conhecimentoC}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento C++:</th>
+                <td>Nível:{{talents.conhecimentoCplusplus}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Cake:</th>
+                <td>Nível:{{talents.conhecimentoCake}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Django:</th>
+                <td>Nível:{{talents.conhecimentoDjango}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Majento:</th>
+                <td>Nível:{{talents.conhecimentoMajento}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Php:</th>
+                <td>Nível:{{talents.conhecimentoPhp}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Wordpress:</th>
+                <td>Nível:{{talents.conhecimentoWordpress}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Phyton:</th>
+                <td>Nível:{{talents.conhecimentoPhyton}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Ruby:</th>
+                <td>Nível:{{talents.conhecimentoRuby}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento MySql Server:</th>
+                <td>Nível:{{talents.conhecimentoMySqlServer}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento MySql:</th>
+                <td>Nível:{{talents.conhecimentoMySql}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Salesforce:</th>
+                <td>Nível:{{talents.conhecimentoSalesforce}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Photoshop:</th>
+                <td>Nível:{{talents.conhecimentoPhotoshop}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Illustrator:</th>
+                <td>Nível:{{talents.conhecimentoIllustrator}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Conhecimento Seo:</th>
+                <td>Nível:{{talents.conhecimentoSeo}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">Outros:</th>
+                <td>{{talents.outros}}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">link Crud:</th>
+                <td>{{talents.linkCrud}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+   
+</div>

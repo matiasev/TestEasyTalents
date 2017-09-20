@@ -1,0 +1,36 @@
+﻿<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Talentos Lista</h1>
+        <p class="lead">Easy Communication & Technology (Developers/Desenvolvedores)</p>
+    </div>
+</div>
+
+
+
+<table class='table' *ngIf="talents">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Cidade</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of talents">
+            <td>{{item.talentID}}</td>
+            <td>{{item.nome}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.cidade}}</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-primary" [routerLink]="['editar/' + item.talentID]">Editar</button>
+                    <button type="button" class="btn btn-info" [routerLink]="['detalhe/' + item.talentID]">Detalhe</button>
+                    <button type="button" class="btn btn-danger" (click)="delete(item)">Excluir</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

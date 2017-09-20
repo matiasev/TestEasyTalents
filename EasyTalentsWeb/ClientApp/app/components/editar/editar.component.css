@@ -1,0 +1,33 @@
+﻿.form-group {
+    margin-bottom: 0px;
+}
+
+.control-label {
+    margin-top: 30px;
+}
+.alert {
+    background-color: rgb(30, 80, 126);
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.radio-inline, .checkbox-inline {
+    margin: 20px;
+    /*vertical-align: central;*/
+}
+
+.font-weight-normal {
+    font-weight: normal;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.btn-primary {
+    margin-bottom: 50px;
+}

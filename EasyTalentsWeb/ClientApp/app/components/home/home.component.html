@@ -1,0 +1,929 @@
+﻿<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Banco de Talentos</h1>
+        <p class="lead">Easy Communication & Technology (Developers/Desenvolvedores)</p>
+    </div>
+</div>
+
+<div>
+    <a href="https://youtu.be/teXgoCzunVE">https://youtu.be/teXgoCzunVE</a>
+
+    <p>We appreciate your contact, check that you do not need to fill out the full form if already has this information on its linkedin, and check out the links at the end of the tutorials (developers).</p>
+
+    <p>Já agradecemos o seu contato, confira que você não precisa preencher o formulário completo caso já tenha essas informações no seu linkedin, e no final confira os links dos tutoriais (desenvolvedores).</p>
+
+    <p>How we work / Como trabalhamos: <a href="https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM">https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM</a></p>
+
+</div>
+
+<span class="text-danger">* Required</span>
+
+<form  (ngSubmit)="add()">
+    <div class="form-group">
+        <label class="control-label" for="exampleInputEmail">Email address:<span class="text-danger">*</span></label>
+        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" [(ngModel)]="talent.email" name="email" maxlength="30" required>
+    </div>
+
+    <div class="alert alert-primary font-weight-bold" role="alert">
+        Occupation area /Área de atuação
+    </div>
+
+    <div>
+        <p>If you are a developer or DBA, continue filling out this form / Se você atua como desenvolvedor ou DBA, continue o preenchimento deste formulário</p>
+        <p>If you act as a designer, fill out the form available at / Se você atua como designer, preencha ao formulário disponível em <a href="https://goo.gl/forms/UJl8Oa91ubN3HRUm1">https://goo.gl/forms/UJl8Oa91ubN3HRUm1</a></p>
+        <p>If you work in the administrative, customer service or commercial area, fill out the form available at / Se você atua na área administrativa, atendimento ao cliente ou comercial, preencha ao formulário disponível em <a href="https://goo.gl/forms/0M99jjUwnIAw0flJ2">https://goo.gl/forms/0M99jjUwnIAw0flJ2</a></p>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Nome/Name:<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter name" [(ngModel)]="talent.nome" name="nome" maxlength="30" required>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Skype: ( please create an account if you don't have yet / bom criar caso não tenha)<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter skype" [(ngModel)]="talent.skype" name="skype" maxlength="15" required>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Telefone/Phone (Whatsapp):<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter telefone" [(ngModel)]="talent.telefone" name="telefone" maxlength="15" required>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Linkedin:</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter linkedin" [(ngModel)]="talent.linkedin" name="linkedin" maxlength="30">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Cidade / City <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter cidade" [(ngModel)]="talent.cidade" name="cidade" maxlength="30" required>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Estado / State <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter estado" [(ngModel)]="talent.estado" name="estado" maxlength="15" required>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Portfolio:</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter portfolio" [(ngModel)]="talent.portfolio" name="portfolio" maxlength="30">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">What is your willingness to work today? / Qual é sua disponibilidade para trabalhar hoje?<span class="text-danger">*</span></label>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="talent.disponibilidadeQuatroHorasDia" name="disponibilidadeQuatroHorasDia">
+                Up to 4 hours per day / Até 4 horas por dia
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="talent.disponibilidadeQuatroSeisHorasDia" name="disponibilidadeQuatroSeisHorasDia">
+                4 to 6 hours per day / De 4 á 6 horas por dia
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="talent.disponibilidadeSeisOitoHorasDia" name="disponibilidadeSeisOitoHorasDia">
+                6 to 8 hours per day /De 6 á 8 horas por dia
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="talent.disponibilidadeAcimaOitoHorasDia" name="disponibilidadeAcimaOitoHorasDia">
+                Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="talent.disponibilidadeApenasFinaisSemana" name="disponibilidadeApenasFinaisSemana">
+                Only weekends / Apenas finais de semana
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">What's the best time to work for you? / Pra você qual é o melhor horário para trabalhar?<span class="text-danger">*</span></label>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="false" [(ngModel)]="talent.horasDisponiveisManha" name="horasDisponiveisManha">
+                Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00)
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="true" [(ngModel)]="talent.horasDisponiveisTarde" name="horasDisponiveisTarde">
+                Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00)
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="false" [(ngModel)]="talent.horasDisponiveisNoite" name="horasDisponiveisNoite">
+                Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00)
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="true" [(ngModel)]="talent.horasDisponiveisMadrugada" name="horasDisponiveisMadrugada">
+                Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante)
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="false" [(ngModel)]="talent.horasDisponiveisComercial" name="horasDisponiveisComercial">
+                Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00)
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">What is your hourly salary requirements? / Qual sua pretensão salarial por hora?<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter pretensão salarial hora" [(ngModel)]="talent.pretensaoSalarialHora" name="pretensaoSalarialHora" maxlength="3" required>
+    </div>
+
+    <div class="alert alert-primary font-weight-bold" role="alert">
+        Bank Information / Informação bancária
+    </div>
+
+    <div>
+        <p>You can choose to receive your payment through Paypal, PagSeguro or conventional bank accounts / Você pode optar em receber seu pagamento pelo Paypal, PagSeguro ou contas bancarias convencionais</p>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Bank Information / Paypal / Itau etc</label>
+        <p class="font-weight-normal">Banco brasileiro precisa: Nome, CPF, Banco, Agencia, Conta Corrente ou Poupanca</p>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter banco informacão" [(ngModel)]="talent.bancoInformacao" name="bancoInformacao" maxlength="15">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Name / Nome</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter informacão bancaria nome" [(ngModel)]="talent.informacaoBancariaNome" name="informacaoBancariaNome" maxlength="30">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Only for Brazilians / CPF</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter informacão bancaria Cpf" [(ngModel)]="talent.informacaoBancariaCpf" name="informacaoBancariaCpf" maxlength="15">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Bank / Banco ( Itau, Bradesco, ect..)</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter informacão bancaria banco" [(ngModel)]="talent.informacaoBancariaBanco" name="informacaoBancariaBanco" maxlength="15">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Agency / Agencia</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter informacao bancaria agencia" [(ngModel)]="talent.informacaoBancariaAgencia" name="informacaoBancariaAgencia" maxlength="10">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Account Type / Tipo de conta</label>
+        <select class="form-control" name="informacaoBancariaTipo" [(ngModel)]="talent.informacaoBancariaTipo">
+            <option *ngFor="let conta of tipoConta" [value]="conta.value">
+                {{conta.display}}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Account Number / Número da conta</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter informacão bancaria bumero conta" [(ngModel)]="talent.informacaoBancariaNumeroConta" name="informacaoBancariaNumeroConta" maxlength="10">
+    </div>
+
+    <div class="alert alert-primary font-weight-bold" role="alert">
+        Knowledge / Conhecimentos
+    </div>
+
+    <div>
+        <p>Rate yourself from 0 to 5 for the knowledge specified below, and that's okay if you do not know many things, the important thing is to be honest! / Avalie-se de 0 a 5 quanto aos conhecimentos especificados abaixo, e tudo bem se não souber de muitas coisas, o importante é que seja sincero!</p>
+    </div>
+
+    <div class="form-group">
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Ionic:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoIonic" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoIonic" required>
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoIonic" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoIonic">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoIonic" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoIonic">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoIonic" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoIonic">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoIonic" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoIonic">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Android:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoAndroid" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoAndroid">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoAndroid" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoAndroid">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoAndroid" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoAndroid">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoAndroid" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoAndroid">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoAndroid" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoAndroid">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Ios:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoIos" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoIos">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoIos" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoIos">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoIos" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoIos">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoIos" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoIos">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoIos" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoIos">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Html:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoHtml" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoHtml">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoHtml" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoHtml">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoHtml" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoHtml">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoHtml" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoHtml">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoHtml" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoHtml">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Css:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoCss" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoCss">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoCss" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoCss">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoCss" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoCss">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoCss" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoCss">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoCss" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoCss">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Bootstrap:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoBootstrap" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoBootstrap">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoBootstrap" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoBootstrap">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoBootstrap" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoBootstrap">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoBootstrap" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoBootstrap">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoBootstrap" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoBootstrap">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Jquery:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoJquery" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoJquery">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoJquery" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoJquery">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoJquery" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoJquery">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoJquery" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoJquery">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoJquery" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoJquery">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento AngularJs:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoAngularJs" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoAngularJs">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoAngularJs" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoAngularJs">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoAngularJs" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoAngularJs">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoAngularJs" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoAngularJs">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoAngularJs" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoAngularJs">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Java:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoJava" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoJava">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoJava" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoJava">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoJava" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoJava">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoJava" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoJava">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoJava" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoJava">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Asp.Net Mvc:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoAspNetMvc" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoAspNetMvc">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoAspNetMvc" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoAspNetMvc">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoAspNetMvc" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoAspNetMvc">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoAspNetMvc" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoAspNetMvc">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoAspNetMvc" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoAspNetMvc">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento C:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoC" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoC">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoC" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoC">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoC" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoC">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoC" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoC">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoC" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoC">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento C++:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoCplusplus" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoCplusplus">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoCplusplus" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoCplusplus">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoCplusplus" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoCplusplus">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoCplusplus" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoCplusplus">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoCplusplus" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoCplusplus">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Cake:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoCake" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoCake">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoCake" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoCake">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoCake" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoCake">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoCake" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoCake">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoCake" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoCake">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Django:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoDjango" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoDjango">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoDjango" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoDjango">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoDjango" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoDjango">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoDjango" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoDjango">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoDjango" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoDjango">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Majento:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoMajento" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoMajento">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoMajento" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoMajento">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoMajento" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoMajento">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoMajento" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoMajento">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoMajento" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoMajento">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Php:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoPhp" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoPhp">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoPhp" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoPhp">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoPhp" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoPhp">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoPhp" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoPhp">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoPhp" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoPhp">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Wordpress:<span class="text-danger">*</span></label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoWordpress" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoWordpress">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoWordpress" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoWordpress">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoWordpress" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoWordpress">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoWordpress" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoWordpress">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoWordpress" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoWordpress">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Phyton:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoPhyton" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoPhyton">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoPhyton" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoPhyton">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoPhyton" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoPhyton">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoPhyton" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoPhyton">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoPhyton" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoPhyton">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Ruby:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoRuby" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoRuby">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoRuby" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoRuby">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoRuby" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoRuby">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoRuby" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoRuby">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoRuby" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoRuby">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento My Sql Server:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoMySqlServer" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoMySqlServer">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoMySqlServer" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoMySqlServer">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoMySqlServer" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoMySqlServer">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoMySqlServer" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoMySqlServer">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoMySqlServer" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoMySqlServer">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento My Sql:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoMySql" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoMySql">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoMySql" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoMySql">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoMySql" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoMySql">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoMySql" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoMySql">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoMySql" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoMySql">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Salesforce:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoSalesforce" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoSalesforce">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoSalesforce" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoSalesforce">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoSalesforce" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoSalesforce">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoSalesforce" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoSalesforce">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoSalesforce" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoSalesforce">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Photoshop:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoPhotoshop" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoPhotoshop">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoPhotoshop" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoPhotoshop">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoPhotoshop" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoPhotoshop">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoPhotoshop" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoPhotoshop">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoPhotoshop" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoPhotoshop">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Illustrator:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoIllustrator" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoIllustrator">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoIllustrator" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoIllustrator">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoIllustrator" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoIllustrator">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoIllustrator" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoIllustrator">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoIllustrator" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoIllustrator">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="radios">Conhecimento Seo:</label>
+            <div class="col-md-12">
+                <label class="font-weight-normal">Nao conheco <br />/ I don't know</label>
+                <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="conhecimentoSeo" id="radios-0" value="1" [(ngModel)]="talent.conhecimentoSeo">
+                    1
+                </label>
+                <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="conhecimentoSeo" id="radios-1" value="2" [(ngModel)]="talent.conhecimentoSeo">
+                    2
+                </label>
+                <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="conhecimentoSeo" id="radios-2" value="3" [(ngModel)]="talent.conhecimentoSeo">
+                    3
+                </label>
+                <label class="radio-inline" for="radios-3">
+                    <input type="radio" name="conhecimentoSeo" id="radios-3" value="4" [(ngModel)]="talent.conhecimentoSeo">
+                    4
+                </label>
+                <label class="radio-inline" for="radios-4">
+                    <input type="radio" name="conhecimentoSeo" id="radios-4" value="5" [(ngModel)]="talent.conhecimentoSeo">
+                    5
+                </label>
+                <label class="font-weight-normal">Sênior</label>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Do you know any other language or framework that was not listed above? Tell us and evaluate yourself from 0 to 5. / Conhece mais alguma linguagem ou framework que não foi listado aqui em cima? Conte para nos e se auto avalie ainda de 0 a 5.</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter outros" [(ngModel)]="talent.outros" name="outros" maxlength="200">
+    </div>
+
+    <div class="alert alert-primary font-weight-bold" role="alert">
+        Enter the link here CRUD (create, update, delete)- read information in the welcome document quoted in the form description./ Insira aqui o link do CRUD (create, update, delete)- ler informações no documento de Boas Vindas citado na descrição do formulário.
+    </div>
+
+    <div class="alert alert-primary font-weight-bold" role="alert">
+        Tutorials - Check out our tutorials and material explaining how the company works / Confira nossos tutoriais e material explicando como a empresa funciona
+    </div>
+
+    <a href="https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM">https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM</a>
+
+    <div class="form-group">
+        <label class="control-label" for="form-group-input">Link Crud</label>
+        <input type="text" class="form-control" id="form-group-input" placeholder="Enter link crud" [(ngModel)]="talent.linkCrud" name="linkCrud" maxlength="30">
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+    <br />
+</form>
